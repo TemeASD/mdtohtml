@@ -3,7 +3,6 @@ if [[ -z "$1" ]] ; then
     echo 'Add project path there'
     echo 'It should have md files which you convert to HTMLs'
     echo 'For example "BasicsOfWeb"'
-    echo 'The folder should reside at the same level as the project folders'
     exit 0
 fi
 
@@ -11,16 +10,21 @@ cd ./../$1
 echo "##########"
 echo "MD TO HTML"
 echo "##########"
-echo "Working currently in folder"
+echo ""
+echo "Working currently in folder:"
 pwd
 FILES=$(find -name '*.md')
 for f in $FILES
 do
-    echo "processing $f"
     fext=$(basename "${f%.*}")
     dirname=$(dirname "${f}")
+    # If the dir contains a folder we dont want to convert, skip it by adding here
+    case "$dirname" in 
+        *"PgwSlideshow-master"*) continue;;
+        *"node_modules"*) continue;;
+    esac
+    echo "processing $f"
     shrtdir=${dirname##?}
-    echo $shrtdir
     filename="${fext%.*}"
     mkdir -p ./html/$shrtdir
     cp ./../mdtohtml/style.css ./html/$shrtdir
