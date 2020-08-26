@@ -3,6 +3,7 @@ if [[ -z "$1" ]] ; then
     echo 'Add project path there'
     echo 'It should have md files which you convert to HTMLs'
     echo 'For example "BasicsOfWeb"'
+    echo 'The folder should reside at the same level as the project folders'
     exit 0
 fi
 
