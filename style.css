@@ -1,0 +1,101 @@
+body {
+margin-left: 30px;
+margin-top: 20px;
+margin-right: 30px;
+margin-bottom: 20px;
+font-family: verdana, arial, serif;
+font-size: 10pt;
+font-weight: normal;
+background-color: #ffffff;
+color: #000000;
+max-width: 1200px;
+}	
+
+pre {
+font-size: 10pt;
+color: lightgray;
+background-color: #404040;
+padding: 1em;
+border: 2px solid black;
+}
+
+div.tasa {
+background: transparent none;
+text-align: justify; 
+width: 600px; 
+float: left;
+}
+
+
+a {
+background: transparent none;
+color: navy;
+}
+
+a:hover {
+background: transparent none;
+color: navy;
+text-decoration: none;
+}
+		
+
+h1 {
+background: transparent none;
+font-family: verdana, arial;
+font-size: 16pt;
+border-bottom: 3px solid #ffac06;
+}
+
+h2 {
+background: transparent none;
+font-family: verdana, arial;
+font-size: 14pt;
+border-bottom: 3px solid #ffac06;
+}
+
+h3 {
+background: transparent none;
+font-family: verdana, arial;
+font-size: 12pt;
+border-bottom: 1px solid #ffac06;
+}
+
+h4 {
+background: transparent none;
+font-family: verdana, arial;
+font-size: 10pt;
+font-weight: 900;
+border-bottom: 1px solid #ffac06;
+}
+
+.ex {
+background-color: #FFF8DC;
+padding: 10px;
+border: 1px solid #000000;
+}
+
+.attention {
+background-color: #fcce57;
+padding: 10px;
+border: 1px solid #000000;
+}
+
+.imgr {
+float: right;
+clear: right;
+margin: 2px 0 0 10px;
+}
+
+table {
+background-color: #dddddd; 
+color: #000000;
+border: 1px solid #000000;
+}
+
+th {
+text-align: left;
+}
+
+blockquote {
+    background-color: lightgray;
+}
