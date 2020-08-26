@@ -6,6 +6,10 @@ if [[ -z "$1" ]] ; then
     exit 0
 fi
 
+# unwanted folders
+pgw="PgwSlideshow-master"
+nodemod="node_modules"
+
 cd ./../$1
 echo "##########"
 echo "MD TO HTML"
@@ -20,8 +24,14 @@ do
     dirname=$(dirname "${f}")
     # If the dir contains a folder we dont want to convert, skip it by adding here
     case "$dirname" in 
-        *"PgwSlideshow-master"*) continue;;
-        *"node_modules"*) continue;;
+        *"$pgw"*) 
+        echo "skipping unwanted file on folder $pgw"
+        continue
+        ;;
+        *"$nodemod"*)
+        echo "skipping unwanted file on folder $nodemod"
+        continue
+        ;;
     esac
     echo "processing $f"
     shrtdir=${dirname##?}
