@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 if [[ -z "$1" ]] ; then
     echo 'Add project path there'
     echo 'It should have md files which you convert to HTMLs'
